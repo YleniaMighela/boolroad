@@ -1,3 +1,5 @@
+import TravelsDetailCard from "./components/TravelsDetailCard"
+
 // importo react-router
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -6,19 +8,22 @@ import DefaultLayout from "./layouts/DefaultLayout";
 
 import HomePage from "./pages/HomePage";
 
+
 function App() {
 
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route element={<DefaultLayout />} >
-            <Route path="/" element={<HomePage />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<DefaultLayout />}>
 
-    </>
+      <Route path="/" element={<HomePage />}/>
+
+      <Route path="/travel" element={<TravelsDetailCard />} />
+      
+      </Route>
+
+    </Routes>
+    </BrowserRouter>
   )
 }
 
