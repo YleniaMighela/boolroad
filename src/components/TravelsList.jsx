@@ -13,7 +13,7 @@ export default function TravelsList() {
             <h2 className="mb-3">Destinazioni di Viaggio</h2>
             <ul className="list-group">
                 {travels.map((trip) => (
-                    <li key={trip.id} className="list-group-item d-flex justify-content-between align-items-center">
+                    <li key={trip.id} className="list-group-item d-flex justify-content-between align-items-center mb-3 border">
                         Viaggio: {trip.citta} - Date: {trip.dataPartenza} - {trip.dataArrivo}
                         <button className="btn btn-primary">Dettagli</button>
                     </li>
