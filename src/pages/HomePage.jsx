@@ -1,13 +1,13 @@
 // HomePage.jsx
 
 // importo il componente TravelList
-import TravelList from "../components/TravelList"
+import TravelsList from "../components/TravelsList"
 
 function App() {
 
     return (
         <>
-            <TravelList />
+            <TravelsList />
         </>
     )
 }
