@@ -1,34 +1,30 @@
 import travels from "../data/DB";
+import { useParams } from "react-router-dom";
 
-export default function travelsDetailCard() {
+export default function TravelsDetailCard() {
+    const { id } = useParams();
+    const travel = travels.find((trip) => trip.id === parseInt(id));
+
+    if (!travel) {
+        return <p>Viaggio non trovato.</p>;
+    }
 
     return (
-        <>
+        <div className="travel_detail_card">
+            <h2>{travel.citta}</h2>
+            <p>{travel.dataPartenza}</p>
+            <p>{travel.dataArrivo}</p>
 
-            {
-                <div className="travel_detail_card">
-                    <h2>{travels[0].citta}</h2>
-                    <p>{travels[0].dataPartenza}</p>
-                    <p>{travels[0].dataArrivo}</p>
+            <strong>Partecipanti</strong>
 
-                    <strong>Partecipanti</strong>
-
-                    <div className="user_info">
-                        {travels[0].persone.map((persona) =>
-                            <div key={persona}>
-                                <p>
-                                    {persona.nome} {persona.cognome}
-                                </p>
-                            </div>
-                        )}
+            <div className="user_info">
+                {travel.persone.map((persona) => (
+                    <div key={persona.nome}>
+                        <p>{persona.nome} {persona.cognome}</p>
                     </div>
-                    <button>
-                        Partecipanti
-                    </button>
-                </div>
-            }
-
-        </>
-    )
-
+                ))}
+            </div>
+            <button>Partecipanti</button>
+        </div>
+    );
 }

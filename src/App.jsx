@@ -13,16 +13,16 @@ function App() {
 
   return (
     <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<DefaultLayout />}>
+      <Routes>
+        <Route path="/" element={<DefaultLayout />}>
 
-      <Route path="/" element={<HomePage />}/>
+          <Route path="/" element={<HomePage />} />
 
-      <Route path="/travel" element={<TravelsDetailCard />} />
-      
-      </Route>
+          <Route path="/travel/:id" element={<TravelsDetailCard />} />
 
-    </Routes>
+        </Route>
+
+      </Routes>
     </BrowserRouter>
   )
 }

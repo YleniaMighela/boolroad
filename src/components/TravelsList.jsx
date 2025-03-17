@@ -1,6 +1,7 @@
 //  TravvelsList.jsx
 
 import travels from "../data/DB";
+import { Link } from "react-router-dom";
 
 // importo bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -15,7 +16,7 @@ export default function TravelsList() {
                 {travels.map((trip) => (
                     <li key={trip.id} className="list-group-item d-flex justify-content-between align-items-center mb-3 border">
                         Viaggio: {trip.citta} - Date: {trip.dataPartenza} - {trip.dataArrivo}
-                        <button className="btn btn-primary">Dettagli</button>
+                        <Link to={`/travel/${trip.id}`} className="btn btn-primary">Dettagli</Link>
                     </li>
                 ))}
             </ul>
