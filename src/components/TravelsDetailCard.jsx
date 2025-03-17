@@ -1,5 +1,6 @@
 import travels from "../data/DB";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function TravelsDetailCard() {
     const { id } = useParams();
@@ -19,8 +20,9 @@ export default function TravelsDetailCard() {
 
             <div className="user_info">
                 {travel.persone.map((persona) => (
-                    <div key={persona.nome}>
+                    <div key={persona.id}>
                         <p>{persona.nome} {persona.cognome}</p>
+                        <Link to={`/travel/traveler/${persona.id}`}>Dettaglio partecipante</Link>
                     </div>
                 ))}
             </div>

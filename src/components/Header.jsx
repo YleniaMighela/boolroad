@@ -1,6 +1,6 @@
 // importo il componente dalla libreria di react-router
 import { Link } from "react-router-dom"
-import SearchBar from "./SearchBar";
+// import SearchBar from "./SearchBar";
 
 
 export default function Header() {
@@ -13,7 +13,7 @@ export default function Header() {
                         <h1 id="title" className="me-2 fw-bold">BOOLROAD</h1>
                     </Link>
                 </div>
-                <SearchBar />
+                {/* <SearchBar /> */}
             </nav>
         </header>
     );

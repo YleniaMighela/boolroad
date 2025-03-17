@@ -1,5 +1,6 @@
 import TravelsDetailCard from "./components/TravelsDetailCard"
 
+
 // importo react-router
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -19,6 +20,9 @@ function App() {
           <Route path="/" element={<HomePage />} />
 
           <Route path="/travel/:id" element={<TravelsDetailCard />} />
+
+          {/* <Route path="/travel/traveler/:id" element={<TravelerDetailCard />} /> */}
+
 
         </Route>
 
