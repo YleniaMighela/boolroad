@@ -7,16 +7,12 @@ export default function Header() {
 
     return (
         <header>
-            <nav className="navbar bg-body-tertiary">
-                <div className="container-fluid">
-                    <Link to="/"> <h1 id="title">BOOLROAD</h1>
-                        <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24" />
+            <nav className="d-flex justify-content-between align-items-center navbar p-3" style={{ backgroundColor: "#0044cc" }}>
+                <div className="d-flex align-items-center">
+                    <Link to="/" className="d-flex align-items-center text-decoration-none" style={{ color: "#28a745" }}>
+                        <h1 id="title" className="me-2 fw-bold">BOOLROAD</h1>
                     </Link>
-
-
-
                 </div>
-
                 <SearchBar />
             </nav>
         </header>
