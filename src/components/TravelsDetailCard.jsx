@@ -2,8 +2,8 @@ const travels = [
     {
         id: 1,
         citta: "Parigi",
-        dataPartenza: "2025-04-10",
-        dataArrivo: "2025-04-15",
+        dataPartenza: "10-04-2025",
+        dataArrivo: "15-04-2025",
         persone: [
             { nome: "Luca", cognome: "Rossi", eta: 30, email: "luca.rossi@example.com", numeroTelefonico: "+390123456789" },
             { nome: "Maria", cognome: "Bianchi", eta: 27, email: "maria.bianchi@example.com", numeroTelefonico: "+390987654321" },
@@ -15,8 +15,8 @@ const travels = [
     {
         id: 2,
         citta: "Londra",
-        dataPartenza: "2025-05-05",
-        dataArrivo: "2025-05-12",
+        dataPartenza: "05-05-2025",
+        dataArrivo: "12-05-2025",
         persone: [
             { nome: "Giovanni", cognome: "Verdi", eta: 35, email: "giovanni.verdi@example.com", numeroTelefonico: "+390112233445" },
             { nome: "Elisa", cognome: "Ferri", eta: 28, email: "elisa.ferri@example.com", numeroTelefonico: "+390998877665" },
@@ -28,8 +28,8 @@ const travels = [
     {
         id: 3,
         citta: "Roma",
-        dataPartenza: "2025-06-01",
-        dataArrivo: "2025-06-07",
+        dataPartenza: "01-06-2025",
+        dataArrivo: "07-06-2025",
         persone: [
             { nome: "Elena", cognome: "Russo", eta: 22, email: "elena.russo@example.com", numeroTelefonico: "+390556677889" },
             { nome: "Marco", cognome: "Ferrari", eta: 29, email: "marco.ferrari@example.com", numeroTelefonico: "+390443322110" },
@@ -41,8 +41,8 @@ const travels = [
     {
         id: 4,
         citta: "Tokyo",
-        dataPartenza: "2025-07-20",
-        dataArrivo: "2025-08-05",
+        dataPartenza: "20-07-2025",
+        dataArrivo: "05-08-2025",
         persone: [
             { nome: "Sara", cognome: "Conti", eta: 31, email: "sara.conti@example.com", numeroTelefonico: "+390667788990" },
             { nome: "Paolo", cognome: "Gatti", eta: 34, email: "paolo.gatti@example.com", numeroTelefonico: "+390223344556" },
@@ -54,8 +54,8 @@ const travels = [
     {
         id: 5,
         citta: "New York",
-        dataPartenza: "2025-09-10",
-        dataArrivo: "2025-09-18",
+        dataPartenza: "10-09-2025",
+        dataArrivo: "18-09-2025",
         persone: [
             { nome: "Davide", cognome: "Marino", eta: 40, email: "davide.marino@example.com", numeroTelefonico: "+390334455667" },
             { nome: "Anna", cognome: "Gallo", eta: 26, email: "anna.gallo@example.com", numeroTelefonico: "+390223344556" },
@@ -67,34 +67,34 @@ const travels = [
 ];
 
 
-export default function travelsDetailCard(){
+export default function travelsDetailCard() {
 
     return (
         <>
 
-        {
-            <div className="travel_detail_card">
-            <h2>{travels[0].citta}</h2>
-            <p>{travels[0].dataPartenza}</p>
-            <p>{travels[0].dataArrivo}</p>
+            {
+                <div className="travel_detail_card">
+                    <h2>{travels[0].citta}</h2>
+                    <p>{travels[0].dataPartenza}</p>
+                    <p>{travels[0].dataArrivo}</p>
 
-            <strong>Partecipanti</strong>
+                    <strong>Partecipanti</strong>
 
-        <div className="user_info">
-            {travels[0].persone.map((persona)=>
-            <div key={persona}>
-            <p>
-            {persona.nome} {persona.cognome}
-            </p>
-            </div>
-            )}
-        </div>
-            <button>
-                Partecipanti
-            </button>
-            </div>
-        }
-        
+                    <div className="user_info">
+                        {travels[0].persone.map((persona) =>
+                            <div key={persona}>
+                                <p>
+                                    {persona.nome} {persona.cognome}
+                                </p>
+                            </div>
+                        )}
+                    </div>
+                    <button>
+                        Partecipanti
+                    </button>
+                </div>
+            }
+
         </>
     )
 
