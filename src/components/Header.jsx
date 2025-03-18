@@ -11,6 +11,7 @@ export default function Header() {
                 <div className="d-flex align-items-center">
                     <Link to="/" className="d-flex align-items-center text-decoration-none" style={{ color: "#28a745" }}>
                         <h1 id="title" className="me-2 fw-bold">BOOLROAD</h1>
+
                     </Link>
                 </div>
                 {/* <SearchBar /> */}
