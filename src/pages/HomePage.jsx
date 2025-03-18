@@ -1,3 +1,5 @@
+// HomePage.jsx
+
 import TravelsList from "../components/TravelsList";
 
 function HomePage({ travels }) {

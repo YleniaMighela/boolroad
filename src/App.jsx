@@ -1,3 +1,5 @@
+// App.jsx
+
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DefaultLayout from "./layouts/DefaultLayout";
@@ -10,7 +12,10 @@ function App() {
   const [travels, setTravels] = useState(travelData);
 
   function handleAddTravel(newTravel) {
-    setTravels((prevTravels) => [...prevTravels, newTravel]);
+    setTravels((prevTravels) => [
+      ...prevTravels,
+      { ...newTravel, persone: [] }
+    ]);
   }
 
   return (
@@ -18,7 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<DefaultLayout />}>
           <Route path="/" element={<HomePage travels={travels} />} />
-          <Route path="/travel/:id" element={<TravelsDetailPage />} />
+          <Route path="/travel/:id" element={<TravelsDetailPage onAddTravel={handleAddTravel} travels={travels} />} />
           <Route path="/travel/create" element={<FormViaggio onAddTravel={handleAddTravel} travels={travels} />} />
         </Route>
       </Routes>

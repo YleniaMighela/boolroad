@@ -1,5 +1,5 @@
-import travels from "../data/DB";
-import { useParams } from "react-router-dom";
+// TravelDetailCard.jsx
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import SearchBar from "./SearchBar";
@@ -8,9 +8,7 @@ import { Link } from "react-router-dom"
 // IMPORTO USESTATE
 import { useState } from 'react';
 
-export default function TravelsDetailCard() {
-    const { id } = useParams();
-    const travel = travels.find((trip) => trip.id === parseInt(id));
+export default function TravelsDetailCard({ travel }) {
 
     if (!travel) {
         return <p>Viaggio non trovato.</p>;
