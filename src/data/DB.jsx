@@ -35,4 +35,10 @@ const travels = [
             { id: 12, nome: "Marco", cognome: "Ferrari", eta: 29, email: "marco.ferrari@example.com", numeroTelefonico: "+390443322110", codiceFiscale: "FRRMRC96B41H501Y" },
             { id: 13, nome: "Chiara", cognome: "Sartori", eta: 25, email: "chiara.sartori@example.com", numeroTelefonico: "+390334455667", codiceFiscale: "SRTCHR00C41H501Z" },
             { id: 14, nome: "Stefano", cognome: "Lombardi", eta: 32, email: "stefano.lombardi@example.com", numeroTelefonico: "+390778899001", codiceFiscale: "LMBSFN93D01H501W" },
-            { id: 15, nome: "Laura", cognome: "Villa", eta: 27, email: "laura.villa@example.com", numeroTelefonico: "+390998877665", codiceFiscale: "VLLFN93D01H501W" }
+            { id: 15, nome: "Laura", cognome: "Villa", eta: 27, email: "laura.villa@example.com", numeroTelefonico: "+390998877665", codiceFiscale: "VLLLRU98E41H501U" }
+        ]
+    }
+
+];
+
+export default travels;
