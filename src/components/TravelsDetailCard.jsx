@@ -1,6 +1,7 @@
 import travels from "../data/DB";
 import { useParams } from "react-router-dom";
-import { Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 export default function TravelsDetailCard() {
     const { id } = useParams();
@@ -18,12 +19,38 @@ export default function TravelsDetailCard() {
 
             <strong>Partecipanti</strong>
 
-            <div className="user_info">
-                {travel.persone.map((persona) => (
-                    <div key={persona.id}>
-                        <p>{persona.nome} {persona.cognome}</p>
-                    </div>
-                ))}
+            <div className="accordion" id="accordionGroup">
+                {travel.persone.map((persona) => {
+                    const collapseId = `collapse-${persona.id}`;
+
+                    return (
+                        <div className="accordion-item" key={persona.id}>
+                            <h2 className="accordion-header" id={`heading-${persona.id}`}>
+                                <button
+                                    className="accordion-button collapsed"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target={`#${collapseId}`}
+                                    aria-expanded="false"
+                                    aria-controls={collapseId}
+                                >
+                                    {persona.nome} {persona.cognome}
+                                </button>
+                            </h2>
+                            <div
+                                id={collapseId}
+                                className="accordion-collapse collapse"
+                                data-bs-parent="#accordionGroup"
+                            >
+                                <div className="accordion-body">
+                                    <span>{persona.eta}</span> |
+                                    <span> {persona.email}</span> |
+                                    <span> {persona.numeroTelefonico}</span>
+                                </div>
+                            </div>
+                        </div>
+                    );
+                })}
             </div>
         </div>
     );
