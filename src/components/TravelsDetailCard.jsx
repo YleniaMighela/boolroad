@@ -46,6 +46,7 @@ export default function TravelsDetailCard() {
                                     <span>{persona.eta}</span> |
                                     <span> {persona.email}</span> |
                                     <span> {persona.numeroTelefonico}</span>
+                                    <span> {persona.codiceFiscale}</span>
                                 </div>
                             </div>
                         </div>
