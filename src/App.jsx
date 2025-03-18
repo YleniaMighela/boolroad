@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DefaultLayout from "./layouts/DefaultLayout";
 import HomePage from "./pages/HomePage";
 import TravelsDetailPage from "./pages/TravelsDetailPage";
-import FormViaggio from "./components/FormViaggio";
 import travelData from "./data/DB";
 
 function App() {
@@ -19,7 +18,6 @@ function App() {
         <Route path="/" element={<DefaultLayout />}>
           <Route path="/" element={<HomePage travels={travels} />} />
           <Route path="/travel/:id" element={<TravelsDetailPage />} />
-          <Route path="/travel/create" element={<FormViaggio onAddTravel={handleAddTravel} />} />
         </Route>
       </Routes>
     </BrowserRouter>
