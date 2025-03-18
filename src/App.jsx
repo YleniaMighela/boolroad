@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DefaultLayout from "./layouts/DefaultLayout";
 import HomePage from "./pages/HomePage";
 import TravelsDetailPage from "./pages/TravelsDetailPage";
-import FormViaggio from "./components/FormViaggio";
 import travelData from "./data/DB";
+import FormViaggio from "./components/FormViaggio";
 
 function App() {
   const [travels, setTravels] = useState(travelData);
