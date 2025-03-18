@@ -43,10 +43,10 @@ export default function TravelsDetailCard() {
                                 data-bs-parent="#accordionGroup"
                             >
                                 <div className="accordion-body">
-                                    <span>{persona.eta}</span> |
-                                    <span> {persona.email}</span> |
-                                    <span> {persona.numeroTelefonico}</span>
-                                    <span> {persona.codiceFiscale}</span>
+                                    <span> <strong>Età:</strong> {persona.eta}</span>
+                                    <span> <strong>Email:</strong>  {persona.email}</span>
+                                    <span><strong>Numero:</strong>{persona.numeroTelefonico}</span>
+                                    <span> <strong>C.F:</strong> {persona.codiceFiscale}</span>
                                 </div>
                             </div>
                         </div>
