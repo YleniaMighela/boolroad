@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import SearchBar from "./SearchBar";
+import { Link } from "react-router-dom"
 
 // IMPORTO USESTATE
 import { useState } from 'react';
@@ -26,6 +27,7 @@ export default function TravelsDetailCard() {
         : travel.persone;
 
     return (
+
         <div className="travel_detail_card">
             <strong className="mb-5">Partecipanti alla gita a {travel.citta}</strong>
 
@@ -65,6 +67,13 @@ export default function TravelsDetailCard() {
                     );
                 })}
             </div>
+            <div className="d-flex justify-content-center">
+                <Link to="/" className="btn btn-success mt-3">
+                    Torna alla lista dei viaggi
+                </Link>
+            </div>
         </div>
+
+
     );
 }
