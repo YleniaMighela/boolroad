@@ -18,6 +18,7 @@ export default function Header() {
                         />
                     </Link>
                 </div>
+                <Link to="/travel/create">Aggiungi Viaggio</Link>
             </nav>
         </header>
     );
