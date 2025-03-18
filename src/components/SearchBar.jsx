@@ -8,7 +8,7 @@ export default function SearchBar({ search, setSearch }) {
     };
 
     return (
-        <nav className="navbar">
+        <nav className="navbar mb-3">
             <div className="container-fluid justify-content-center">
                 <form className="d-flex" role="search">
                     <input className="form-control me-2" type="search" placeholder="Cerca partecipante..."

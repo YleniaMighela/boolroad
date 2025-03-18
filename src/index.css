@@ -51,7 +51,7 @@ li {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
-    margin: 20px auto;
+    margin-bottom: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     min-width: 100%;
 }
@@ -78,7 +78,7 @@ li {
     border-radius: 4px;
     padding: 10px 15px;
     cursor: pointer;
-    margin-top: 15px;
+    margin-bottom: 25px;
     transition: background-color 0.3s ease;
 }
 
