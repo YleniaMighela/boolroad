@@ -109,3 +109,8 @@ li {
     font-size: 1rem;
     color: black;
 }
+
+.span_head {
+    font-weight: bold;
+    color: black;
+}

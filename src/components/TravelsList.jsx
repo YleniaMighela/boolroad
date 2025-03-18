@@ -15,7 +15,7 @@ export default function TravelsList() {
             <ul className="list-group">
                 {travels.map((trip) => (
                     <li key={trip.id} className="list-group-item d-flex justify-content-between align-items-center mb-3 border">
-                        Viaggio: {trip.citta} - Date: {trip.dataPartenza} - {trip.dataArrivo}
+                        <span className="span_head">Viaggio:</span>{trip.citta}<span className="span_head"> Date:</span>{trip.dataPartenza}<span className="span_head">-</span>{trip.dataArrivo}
                         <Link to={`/travel/${trip.id}`} className="btn btn-primary">Dettagli</Link>
                     </li>
                 ))}
