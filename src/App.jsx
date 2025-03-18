@@ -19,7 +19,7 @@ function App() {
         <Route path="/" element={<DefaultLayout />}>
           <Route path="/" element={<HomePage travels={travels} />} />
           <Route path="/travel/:id" element={<TravelsDetailPage />} />
-          <Route path="/travel/create" element={<FormViaggio onAddTravel={handleAddTravel} />} />
+          <Route path="/travel/create" element={<FormViaggio onAddTravel={handleAddTravel} travels={travels} />} />
         </Route>
       </Routes>
     </BrowserRouter>

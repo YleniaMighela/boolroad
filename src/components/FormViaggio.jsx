@@ -7,25 +7,27 @@ const initialFormData = {
     dataArrivo: ""
 };
 
-export default function FormViaggio({ onAddTravel }) {
+export default function FormViaggio({ onAddTravel, travels }) {
+
     const [formData, setFormData] = useState(initialFormData);
     const navigate = useNavigate();
 
-    function handleSubmit(e) {
-        e.preventDefault();
-        onAddTravel({
-            id: Date.now(),
-            ...formData
-        });
-        setFormData(initialFormData);
-        navigate("/");
-    }
 
     function handleFormData(e) {
         setFormData((currentFormData) => ({
             ...currentFormData,
             [e.target.name]: e.target.value
         }));
+    }
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        onAddTravel({
+            id: travels.length === 0 ? 1 : travels[travels.length - 1].id + 1,
+            ...formData
+        });
+        setFormData(initialFormData);
+        navigate(`/`);
     }
 
     return (
@@ -61,9 +63,7 @@ export default function FormViaggio({ onAddTravel }) {
                 />
             </div>
             <div className="col-12">
-
                 <button type="submit" className="btn btn-primary">Click</button>
-
             </div>
         </form>
     );
