@@ -22,11 +22,9 @@ export default function TravelsDetailCard() {
                 {travel.persone.map((persona) => (
                     <div key={persona.id}>
                         <p>{persona.nome} {persona.cognome}</p>
-                        <Link to={`/travel/traveler/${persona.id}`}>Dettaglio partecipante</Link>
                     </div>
                 ))}
             </div>
-            <button>Partecipanti</button>
         </div>
     );
 }
