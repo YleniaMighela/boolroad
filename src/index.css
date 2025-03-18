@@ -112,6 +112,10 @@ li {
     color: black;
 }
 
+.accordion-button::after {
+    filter: invert(1);
+}
+
 .span_head {
     font-weight: bold;
     color: black;
