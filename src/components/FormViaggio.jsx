@@ -20,12 +20,28 @@ export default function FormViaggio({ onAddTravel, travels }) {
         }));
     }
 
+    // funzione convertire data in formato europeo
+    function formatDateToEuropean(date) {
+        if (!date) return "";
+
+        if (date instanceof Date) {
+            return date.toLocaleDateString("it-IT");
+        }
+
+        const [year, month, day] = date.split("-");
+        return `${day}-${month}-${year}`;
+    }
+
     function handleSubmit(e) {
         e.preventDefault();
-        onAddTravel({
+        const newTravel = {
             id: travels.length === 0 ? 1 : travels[travels.length - 1].id + 1,
-            ...formData
-        });
+            citta: formData.citta,
+            dataPartenza: formatDateToEuropean(formData.dataPartenza),
+            dataArrivo: formatDateToEuropean(formData.dataArrivo),
+        };
+
+        onAddTravel(newTravel);
         setFormData(initialFormData);
         navigate(`/`);
     }
