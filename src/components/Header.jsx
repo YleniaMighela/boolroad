@@ -7,14 +7,14 @@ export default function Header() {
 
     return (
         <header>
-            <nav className="d-flex justify-content-between align-items-center navbar p-1" style={{ backgroundColor: "#0044cc" }}>
+            <nav className="d-flex justify-content-between align-items-center navbar p-2" style={{ backgroundColor: "#0044cc" }}>
                 <div className="d-flex align-items-center">
                     <Link to="/" className="d-flex align-items-center text-decoration-none" style={{ color: "#28a745" }}>
                         <img
                             src="/Logo.png"
                             alt="BoolRoad Logo"
                             className="me-2"
-                            style={{ height: "120px" }}
+                            style={{ height: "90px" }}
                         />
                     </Link>
                 </div>
