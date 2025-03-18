@@ -27,13 +27,9 @@ export default function TravelsDetailCard() {
 
     return (
         <div className="travel_detail_card">
-            <h2>{travel.citta}</h2>
-            <p>{travel.dataPartenza}</p>
-            <p>{travel.dataArrivo}</p>
+            <strong className="mb-5">Partecipanti alla gita a {travel.citta}</strong>
 
             <SearchBar search={search} setSearch={setSearch} />
-
-            <strong>Partecipanti</strong>
 
             <div className="accordion" id="accordionGroup">
                 {filteredPeople.map((persona) => {
