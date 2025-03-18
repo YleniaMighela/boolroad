@@ -2,6 +2,10 @@ import travels from "../data/DB";
 import { useParams } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import SearchBar from "./SearchBar";
+
+// IMPORTO USESTATE
+import { useState } from 'react';
 
 export default function TravelsDetailCard() {
     const { id } = useParams();
@@ -11,16 +15,28 @@ export default function TravelsDetailCard() {
         return <p>Viaggio non trovato.</p>;
     }
 
+    const [search, setSearch] = useState("");
+
+    // Funzione di filtro applicata direttamente nella map
+    const filteredPeople = search
+        ? travel.persone.filter(person =>
+            person.nome.toLowerCase().includes(search.toLowerCase()) ||
+            person.cognome.toLowerCase().includes(search.toLowerCase())
+        )
+        : travel.persone;
+
     return (
         <div className="travel_detail_card">
             <h2>{travel.citta}</h2>
             <p>{travel.dataPartenza}</p>
             <p>{travel.dataArrivo}</p>
 
+            <SearchBar search={search} setSearch={setSearch} />
+
             <strong>Partecipanti</strong>
 
             <div className="accordion" id="accordionGroup">
-                {travel.persone.map((persona) => {
+                {filteredPeople.map((persona) => {
                     const collapseId = `collapse-${persona.id}`;
 
                     return (
@@ -43,9 +59,9 @@ export default function TravelsDetailCard() {
                                 data-bs-parent="#accordionGroup"
                             >
                                 <div className="accordion-body">
-                                    <span> <strong>Età:</strong> {persona.eta}</span>
-                                    <span> <strong>Email:</strong>  {persona.email}</span>
-                                    <span><strong>Numero:</strong>{persona.numeroTelefonico}</span>
+                                    <span> <strong>Età :</strong> {persona.eta}</span>
+                                    <span> <strong>Email:</strong> {persona.email}</span>
+                                    <span><strong>Numero:</strong> {persona.numeroTelefonico}</span>
                                     <span> <strong>C.F:</strong> {persona.codiceFiscale}</span>
                                 </div>
                             </div>
