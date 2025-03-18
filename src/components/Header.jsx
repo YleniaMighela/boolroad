@@ -18,7 +18,9 @@ export default function Header() {
                         />
                     </Link>
                 </div>
-                <Link to="/travel/create" className="d-flex align-items-center text-decoration-none">Aggiungi Viaggio</Link>
+                <Link to="/travel/create" className="btn btn-success d-flex align-items-center justify-content-center">
+                    ➕ Aggiungi Viaggio
+                </Link>
             </nav>
         </header>
     );

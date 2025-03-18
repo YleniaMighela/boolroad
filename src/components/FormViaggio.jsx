@@ -31,7 +31,7 @@ export default function FormViaggio({ onAddTravel, travels }) {
     }
 
     return (
-        <form className="row g-3 bg-primary" onSubmit={handleSubmit}>
+        <form className="row g-3 mt-4 travel_detail_card" onSubmit={handleSubmit}>
             <div className="col-md-6">
                 <label className="form-label">Destinazione</label>
                 <input
@@ -62,8 +62,8 @@ export default function FormViaggio({ onAddTravel, travels }) {
                     onChange={handleFormData}
                 />
             </div>
-            <div className="col-12">
-                <button type="submit" className="btn btn-primary">Click</button>
+            <div className="col-12 d-flex justify-content-center mb-3">
+                <button type="submit" className="btn btn-success">Aggiungi Viaggio</button>
             </div>
         </form>
     );
