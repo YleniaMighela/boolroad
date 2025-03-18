@@ -5,10 +5,12 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import SearchBar from "./SearchBar";
 import { Link } from "react-router-dom"
 
+import FormPersona from "./FormPersona";
+
 // IMPORTO USESTATE
 import { useState } from 'react';
 
-export default function TravelsDetailCard({ travel }) {
+export default function TravelsDetailCard({ travel, onAddPersona }) {
 
     if (!travel) {
         return <p>Viaggio non trovato.</p>;
@@ -70,6 +72,7 @@ export default function TravelsDetailCard({ travel }) {
                     Torna alla lista dei viaggi
                 </Link>
             </div>
+            <FormPersona onAddPersona={onAddPersona} persone={travel.persone} />
         </div>
 
 
