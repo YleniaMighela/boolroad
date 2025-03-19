@@ -1,8 +1,10 @@
 // FormPersona.jsx
-
+//  Importo useState per gestire lo stato locale e useNavigate per la navigazione
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+
+// Stato iniziale del form, con tutti i campi vuoti
 const initialFormData = {
     nome: "",
     cognome: "",
@@ -11,27 +13,37 @@ const initialFormData = {
     codiceFiscale: ""
 };
 
+// Definizione del componente FormPersona
+// Props:
+// - onAddPersona: funzione per aggiungere una nuova persona al viaggio
+// - persone: lista attuale dei partecipanti
+
 export default function FormPersona({ onAddPersona, persone }) {
 
+    // Stato per gestire i dati inseriti dall'utente
     const [formData, setFormData] = useState(initialFormData);
     const navigate = useNavigate();
 
-
+    // Funzione per aggiornare lo stato ogni volta che l'utente modifica un campo
     function handleFormData(e) {
         setFormData((currentFormData) => ({
             ...currentFormData,
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.value // Aggiorno solo il campo modificato
         }));
     }
 
+    // Funzione che gestisce il submit del form
     function handleSubmit(e) {
-        e.preventDefault();
+        e.preventDefault(); // Evita il refresh della pagina
+        // Creo il nuovo oggetto persona, assegnando un id univoco
         const newPersona = {
             id: persone.length === 0 ? 1 : persone[persone.length - 1].id + 1,
-            ...formData
+            ...formData // Copio i dati inseriti dall'utente
         };
 
+        // Aggiungo la nuova persona alla lista tramite la funzione passata come prop
         onAddPersona(newPersona);
+        // Resetto il form dopo l'invio
         setFormData(initialFormData);
     }
 

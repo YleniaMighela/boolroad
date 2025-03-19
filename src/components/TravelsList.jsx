@@ -1,6 +1,9 @@
+// Importo Link per la navigazione tra le pagine
 import { Link } from "react-router-dom";
+// Importo lo stile di Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
 
+// Definisco il componente TravelsList che riceve la lista dei viaggi come prop
 export default function TravelsList({ travels }) {
 
     return (
