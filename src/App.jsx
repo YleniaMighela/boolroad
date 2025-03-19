@@ -23,7 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<DefaultLayout />}>
           <Route path="/" element={<HomePage travels={travels} />} />
-          <Route path="/travel/:id" element={<TravelsDetailPage onAddTravel={handleAddTravel} travels={travels} />} />
+          <Route path="/travel/:id" element={<TravelsDetailPage travels={travels} setTravels={setTravels} />} />
           <Route path="/travel/create" element={<FormViaggio onAddTravel={handleAddTravel} travels={travels} />} />
         </Route>
       </Routes>
