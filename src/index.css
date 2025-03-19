@@ -6,6 +6,8 @@
 
 }
 
+/* SECTION BODY */
+
 body {
     font-family: "Roboto", sans-serif;
     background-image: url(../public/background.webp);
@@ -43,7 +45,7 @@ li {
 }
 
 
-
+/* SECTION TRAVELSDETAILCARD */
 
 .travel_detail_card {
     font-family: Arial, sans-serif;
@@ -56,6 +58,7 @@ li {
     min-width: 100%;
 }
 
+/* TAG H2 */
 .travel_detail_card h2 {
     font-size: 2.5rem;
     color: #333;
@@ -64,12 +67,14 @@ li {
 
 }
 
+/* TAG PARAGRAFO */
 .travel_detail_card p {
     font-size: 1rem;
     color: #555;
     margin: 5px 0;
 }
 
+/* TAG BOTTONE */
 .travel_detail_card button {
     font-size: 1rem;
     color: #fff;
@@ -86,13 +91,16 @@ li {
     background-color: #0056b3;
 }
 
+
+/* TAG STRONG */
 .travel_detail_card strong {
     font-size: 1.7rem;
     color: black;
     margin: 5px 0;
 }
 
-.user_info {
+
+/* .user_info {
 
     font-size: 1.5rem;
 
@@ -100,8 +108,10 @@ li {
 
     padding: 15px;
 
-}
+} */
 
+
+/* SECTION ACCORDION  */
 .accordion-body span {
     display: block;
 }
@@ -116,7 +126,9 @@ li {
     filter: invert(1);
 }
 
-.span_head {
+
+
+/* .span_head {
     font-weight: bold;
     color: black;
-}
+} */
