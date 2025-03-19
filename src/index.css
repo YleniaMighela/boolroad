@@ -9,14 +9,13 @@
 /* SECTION BODY */
 
 body {
+    
     font-family: "Roboto", sans-serif;
     background-image: url(../public/background.webp);
     background-position: center;
     background-attachment: fixed;
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    position: relative;
-
 }
 
 body::before {
