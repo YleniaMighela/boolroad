@@ -29,7 +29,7 @@ export default function TravelsDetailCard({ travel, onAddPersona }) {
     return (
 
         <div className="travel_detail_card">
-            <strong className="mb-5">Partecipanti alla gita a {travel.citta}</strong>
+            <strong className="mb-5">Partecipanti al viaggio : {travel.citta}</strong>
 
             <SearchBar search={search} setSearch={setSearch} />
 
