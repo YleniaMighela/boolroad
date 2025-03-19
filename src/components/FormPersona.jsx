@@ -9,6 +9,7 @@ const initialFormData = {
     nome: "",
     cognome: "",
     email: "",
+    eta: "",
     numeroTelefonico: "",
     codiceFiscale: ""
 };
@@ -66,6 +67,16 @@ export default function FormPersona({ onAddPersona, persone }) {
                     name="cognome"
                     className="form-control"
                     value={formData.cognome}
+                    onChange={handleFormData}
+                />
+            </div>
+            <div className="col-md-6">
+                <label className="form-label">Età</label>
+                <input
+                    type="number"
+                    name="eta"
+                    className="form-control"
+                    value={formData.eta}
                     onChange={handleFormData}
                 />
             </div>
