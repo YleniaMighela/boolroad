@@ -9,7 +9,7 @@
 /* SECTION BODY */
 
 body {
-    
+
     font-family: "Roboto", sans-serif;
     background-image: url(../public/background.webp);
     background-position: center;
@@ -133,7 +133,7 @@ li {
     color: black;
 } */
 
- 
+
 .list-group li {
 
     font-size: 1.2rem;
@@ -163,17 +163,17 @@ button.btn-success {
 
 
 @media screen and (max-width:920px) {
-    
-    main .container li{
+
+    main .container li {
 
         display: flex;
-    
+
         justify-content: center;
-    
+
         flex-direction: column;
-    
+
         text-align: center;
-    
+
         gap: 1rem;
     }
 
