@@ -13,7 +13,7 @@ body {
     background-image: url(../public/background.webp);
     background-position: center;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
     position: relative;
 
@@ -87,6 +87,7 @@ li {
     transition: background-color 0.3s ease;
 }
 
+
 .travel_detail_card button:hover {
     background-color: #0056b3;
 }
@@ -132,3 +133,49 @@ li {
     font-weight: bold;
     color: black;
 } */
+
+ 
+.list-group li {
+
+    font-size: 1.2rem;
+
+    cursor: pointer;
+
+    text-align: center;
+
+}
+
+.list-group li .btn-primary {
+
+    font-size: 1.2rem;
+
+}
+
+.accordion-item {
+
+    padding: 10px;
+
+}
+
+
+button.btn-success {
+    margin: 0;
+}
+
+
+@media screen and (max-width:920px) {
+    
+    main .container li{
+
+        display: flex;
+    
+        justify-content: center;
+    
+        flex-direction: column;
+    
+        text-align: center;
+    
+        gap: 1rem;
+    }
+
+}

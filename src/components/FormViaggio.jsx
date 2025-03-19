@@ -94,7 +94,7 @@ export default function FormViaggio({ onAddTravel, travels }) {
                     onChange={handleFormData}
                 />
             </div>
-            <div className="col-12 d-flex justify-content-center mb-3">
+            <div className="col-12 d-flex justify-content-center">
                 <button type="submit" className="btn btn-success">Aggiungi Viaggio</button>
             </div>
         </form>
