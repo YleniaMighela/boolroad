@@ -1,21 +1,29 @@
 // TravelDetailCard.jsx
 
+// Importo i file CSS e JS di Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+
+// Importo il componente SearchBar per la ricerca tra i partecipanti
 import SearchBar from "./SearchBar";
+
+// Importo Link per gestire la navigazione
 import { Link } from "react-router-dom"
 
+// Importo il form per aggiungere una nuova persona
 import FormPersona from "./FormPersona";
 
-// IMPORTO USESTATE
+// IMPORTO USESTATE  di React per gestire stati locali
 import { useState } from 'react';
 
 export default function TravelsDetailCard({ travel, onAddPersona }) {
 
+    // Se non ricevo un viaggio valido, mostro un messaggio di errore
     if (!travel) {
         return <p>Viaggio non trovato.</p>;
     }
 
+    // Stato per gestire il valore della barra di ricerca
     const [search, setSearch] = useState("");
 
     // Funzione di filtro applicata direttamente nella map
