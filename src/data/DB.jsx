@@ -2,8 +2,8 @@ const travels = [
     {
         id: 1,
         citta: "Parigi",
-        dataPartenza: "10-04-2025",
-        dataArrivo: "15-04-2025",
+        dataPartenza: "10-02-2025",
+        dataArrivo: "15-02-2025",
         persone: [
             { id: 1, nome: "Luca", cognome: "Rossi", eta: 30, email: "luca.rossi@example.com", numeroTelefonico: "+390123456789", codiceFiscale: "RSSLCU95A01H501X" },
             { id: 2, nome: "Maria", cognome: "Bianchi", eta: 27, email: "maria.bianchi@example.com", numeroTelefonico: "+390987654321", codiceFiscale: "BNCMRC98B41H501Y" },
@@ -15,8 +15,8 @@ const travels = [
     {
         id: 2,
         citta: "Londra",
-        dataPartenza: "05-05-2025",
-        dataArrivo: "12-05-2025",
+        dataPartenza: "10-03-2025",
+        dataArrivo: "20-03-2025",
         persone: [
             { id: 6, nome: "Giovanni", cognome: "Verdi", eta: 35, email: "giovanni.verdi@example.com", numeroTelefonico: "+390112233445", codiceFiscale: "VRDGNN90A01H501X" },
             { id: 7, nome: "Elisa", cognome: "Ferri", eta: 28, email: "elisa.ferri@example.com", numeroTelefonico: "+390998877665", codiceFiscale: "FRRLSA97B41H501Y" },
