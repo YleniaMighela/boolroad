@@ -1,14 +1,14 @@
-# React + Vite
+Boolroad è una web app sviluppata in React per la gestione di viaggi e partecipanti, realizzata come progetto di gruppo durante il corso Boolean.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+L’app permette agli utenti di:
 
-Currently, two official plugins are available:
+🌍 Esplorare una lista di destinazioni con informazioni chiare e organizzate
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔍 Visualizzare i dettagli di ogni viaggio, inclusi luogo, date e partecipanti
 
-## Expanding the ESLint configuration
+➕ Aggiungere nuovi viaggi con facilità, grazie a form intuitivi
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🧑‍🤝‍🧑 Registrare e gestire i partecipanti, inserendo tutti i dati necessari
 
-
+L’interfaccia è moderna, responsive e progettata con Bootstrap, per un'esperienza utente fluida su tutti i dispositivi.
+La navigazione tra le sezioni dell’app è gestita tramite React Router, garantendo passaggi veloci e senza ricaricamenti di pagina.
